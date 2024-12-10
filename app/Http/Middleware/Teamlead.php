@@ -18,6 +18,6 @@ class Teamlead
         if ($request->user()->role_access == 'teamlead') {
             return $next($request);
         }
-        abort(403, 'Akses khusus Team Leader');
+        abort(403, 'Akses ditolak! halaman ini khusus Team Leader');
     }
 }
