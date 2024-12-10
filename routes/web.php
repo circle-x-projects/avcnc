@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeEngineerController;
 use App\Http\Controllers\HomeTeamleaderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ Route::prefix('teamlead')->middleware(['auth', 'auth.teamlead'])->group(function
 
 Route::prefix('engineer')->middleware(['auth', 'auth.engineer'])->group(function () {
     // Route Group for Engineer
-     Route::get('beranda', [HomeTeamleaderController::class, 'index'])->name('engineer.dashboard');
+     Route::get('beranda', [HomeEngineerController::class, 'index'])->name('engineer.dashboard');
 });
 
 Route::prefix('qc')->middleware(['auth', 'auth.qc'])->group(function () {
