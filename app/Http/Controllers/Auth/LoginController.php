@@ -43,9 +43,9 @@ class LoginController extends Controller
     public function authenticated(Request $request, $user)
     {
         if ($user->role_access == 'teamlead') {
-            return redirect()->route('teamlead.beranda');
+            return redirect()->route('teamlead.dashboard');
         } elseif ($user->role_access == 'engineer') {
-            return redirect()->route('engineer.beranda');
+            return redirect()->route('engineer.dashboard');
         } else {
             Auth::logout();
             flash('Anda tidak memiliki hak akses')->error();
