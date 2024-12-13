@@ -26,3 +26,8 @@ Route::prefix('engineer')->middleware(['auth', 'auth.engineer'])->group(function
 Route::prefix('qc')->middleware(['auth', 'auth.qc'])->group(function () {
     // Route Group for QA Engineer
 });
+
+Route::get('logout', function () {
+    Auth::logout();
+    return redirect('/');
+});
