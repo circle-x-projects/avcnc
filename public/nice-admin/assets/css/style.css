@@ -835,6 +835,26 @@ h6 {
   background: #ffecdf;
 }
 
+.dashboard .issue-card .card-icon {
+  color: #ff4545;
+  background: #e0f8e9;
+}
+
+.dashboard .case-card .card-icon {
+  color: #ff771d;
+  background: #ffecdf;
+}
+
+.dashboard .pica-card .card-icon {
+  color: #ff771d;
+  background: #dffad9;
+}
+
+.dashboard .complain-card .card-icon {
+  color: #ff1d70;
+  background: #ffebf2;
+}
+
 /* Activity */
 .dashboard .activity {
   font-size: 14px;
