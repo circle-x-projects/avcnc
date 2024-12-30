@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChecklistWeeklyController;
 use App\Http\Controllers\HomeEngineerController;
 use App\Http\Controllers\HomeTeamleaderController;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('teamlead')->middleware(['auth', 'auth.teamlead'])->group(function () {
     // Route Group for Team Lead
      Route::get('beranda', [HomeTeamleaderController::class, 'index'])->name('teamlead.dashboard');
+     Route::get('checklist', [ChecklistWeeklyController::class, 'index'])->name('teamlead.checklist');
 });
 
 Route::prefix('engineer')->middleware(['auth', 'auth.engineer'])->group(function () {
