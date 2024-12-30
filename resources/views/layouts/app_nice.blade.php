@@ -45,7 +45,11 @@
     <!-- End Header -->
 
     <!-- Sidebar -->
-    @include('includes.sidebar')
+    @if (auth()->user()->role_access == 'teamlead')
+      @include('includes.sidebar')
+    @else
+      @include('includes.sidebar_engineer')
+    @endif
     <!-- End Sidebar-->
 
     <!-- Main -->
