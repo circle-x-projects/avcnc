@@ -3,7 +3,7 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('teamlead.dashboard') }}">
+            <a class="nav-link {{ \Route::is('teamlead.dashboard') == true ? '' : 'collapsed' }}" href="{{ route('teamlead.dashboard') }}">
                 <i class="bi bi-stack"></i>
                 <span style="font-size: 11pt; margin-top: 2px">Dashboard</span>
             </a>
@@ -13,9 +13,9 @@
         <li class="nav-heading">Team Management</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ asset('nice-admin') }}/pages-blank.html">
-                <i class="bi bi-chat-right-dots"></i>
-                <span style="font-size: 11pt;">Reminder Notes</span>
+            <a class="nav-link {{ \Route::is('teamlead.checklist') == true ? '' : 'collapsed' }}" href="{{ route('teamlead.checklist') }}">
+                <i class="bi bi-calendar2-check-fill"></i> <!-- Active -->
+                <span style="font-size: 11pt;">Checklist Weekly</span>
             </a>
         </li><!-- End Blank Page Nav -->
 
@@ -166,7 +166,13 @@
         </ul>
         </li><!-- End Charts Nav -->
 
-        <li class="nav-heading">Monitoring & Stability</li>
+        <li class="nav-heading">Master Data</li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ asset('nice-admin') }}/pages-blank.html">
+                <i class="bi bi-people-fill"></i>
+                <span>Data User</span>
+            </a>
+        </li><!-- End Blank Page Nav -->
 
         <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
@@ -192,29 +198,6 @@
         </li><!-- End Icons Nav -->
 
         <li class="nav-heading">General Settings</li>
-
-        <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#team-member-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-people"></i><span style="font-size: 12pt; margin-top: 2px">Team Member</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="team-member-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-            <a href="{{ asset('nice-admin') }}/icons-bootstrap.html">
-                <span>Engineer</span>
-            </a>
-            </li>
-            <li>
-            <a href="{{ asset('nice-admin') }}/icons-remix.html">
-                <span>Quality Assurance</span>
-            </a>
-            </li>
-            <li>
-            <a href="{{ asset('nice-admin') }}/icons-boxicons.html">
-                <span>Team Leader</span>
-            </a>
-            </li>
-        </ul>
-        </li><!-- End Icons Nav -->
 
         <li class="nav-item">
         <a class="nav-link collapsed" href="{{ asset('nice-admin') }}/users-profile.html">

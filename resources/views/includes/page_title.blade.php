@@ -9,7 +9,13 @@
                 {{ route('engineer.dashboard'); }}
             @endif
             ">Home</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item active">
+            @if (\Route::is('teamlead.checklist') == true)
+                Checklist Weekly
+            @elseif(\Route::is('teamlead.dashboard') == true)
+                Dashboard
+            @endif
+        </li>
     </ol>
     </nav>
 </div>
