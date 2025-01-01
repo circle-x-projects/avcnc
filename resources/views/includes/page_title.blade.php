@@ -14,6 +14,8 @@
                 Checklist Weekly
             @elseif(\Route::is('teamlead.dashboard') == true)
                 Dashboard
+            @elseif(\Route::is('teamlead.users') == true)
+                Data User
             @endif
         </li>
     </ol>
