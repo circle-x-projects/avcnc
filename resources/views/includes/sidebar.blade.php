@@ -168,7 +168,7 @@
 
         <li class="nav-heading">Master Data</li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ asset('nice-admin') }}/pages-blank.html">
+            <a class="nav-link {{ \Route::is('teamlead.users') == true ? '' : 'collapsed' }}" href="{{ route('teamlead.users') }}">
                 <i class="bi bi-people-fill"></i>
                 <span>Data User</span>
             </a>
